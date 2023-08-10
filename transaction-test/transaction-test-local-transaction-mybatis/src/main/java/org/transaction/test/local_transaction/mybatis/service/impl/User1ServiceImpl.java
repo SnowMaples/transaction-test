@@ -16,7 +16,12 @@ public class User1ServiceImpl implements User1Service {
 	public void truncate(){
 		user1Mapper.truncated();
 	}
-	
+
+	@Override
+	public void delete() {
+		user1Mapper.delete();
+	}
+
 	@Override
 	public void add(User1 user){
 		user1Mapper.insert(user);

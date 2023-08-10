@@ -17,7 +17,12 @@ public class User2ServiceImpl implements User2Service {
 	public void truncate(){
 		user2Mapper.truncated();
 	}
-	
+
+	@Override
+	public void delete() {
+		user2Mapper.delete();
+	}
+
 	@Override
 	public void add(User2 user){
 		user2Mapper.insert(user);

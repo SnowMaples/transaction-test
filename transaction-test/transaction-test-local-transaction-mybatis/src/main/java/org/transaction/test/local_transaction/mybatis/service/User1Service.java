@@ -10,6 +10,8 @@ public interface User1Service {
 	
 	void truncate();
 
+	void delete();
+
 	void addSupports(User1 user);
 
 	void addSupportsException(User1 user);

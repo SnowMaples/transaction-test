@@ -4,7 +4,9 @@ public interface TransactionPropagationExample {
 	
 	
 	void truncated();
-	
+
+	void delete();
+
 	void notransaction_required_required();
 
 	
@@ -68,6 +70,7 @@ public interface TransactionPropagationExample {
 	void transaction_nested_nested_exception_try();
 
 	void transaction_required_required_exception_try();
+	void transaction_required_required_exception_try2();
 
 	void transaction_noTransaction_noTransaction_exception_try();
 

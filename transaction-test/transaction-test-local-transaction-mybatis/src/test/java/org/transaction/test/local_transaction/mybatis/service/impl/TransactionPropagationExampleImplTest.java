@@ -21,7 +21,8 @@ public class TransactionPropagationExampleImplTest {
 
 	@Before
 	public void setUpBeforeClass() throws Exception {
-		transactionPropagationExample.truncated();
+//		transactionPropagationExample.truncated();
+		transactionPropagationExample.delete();
 	}
 
 	/**
@@ -132,6 +133,10 @@ public class TransactionPropagationExampleImplTest {
 	@Test
 	public void testTransaction_required_required_exception_try() {
 		transactionPropagationExample.transaction_required_required_exception_try();
+	}
+	@Test
+	public void testTransaction_required_required_exception_try2() {
+		transactionPropagationExample.transaction_required_required_exception_try2();
 	}
 
 	/**

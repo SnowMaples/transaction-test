@@ -97,6 +97,10 @@
   </update>
   
   <update id="truncated">
-        TRUNCATE TABLE user2;
+        truncate table user2
     </update>
+
+  <delete id="delete">
+    delete user2
+  </delete>
 </mapper>

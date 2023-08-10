@@ -9,6 +9,7 @@ public interface User2Service {
 	void addRequiredException(User2 user);
 	
 	void truncate();
+	void delete();
 
 	void addSupports(User2 user);
 

@@ -52,4 +52,6 @@ public interface User1Mapper {
     int updateByPrimaryKey(User1 record);
     
     int truncated();
+
+    int delete();
 }
