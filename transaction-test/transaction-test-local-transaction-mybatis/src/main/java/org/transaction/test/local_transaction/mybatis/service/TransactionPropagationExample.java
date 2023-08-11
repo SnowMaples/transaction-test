@@ -71,6 +71,7 @@ public interface TransactionPropagationExample {
 
 	void transaction_required_required_exception_try();
 	void transaction_required_required_exception_try2();
+	void noTransaction_no_transaction_inner_required();
 
 	void transaction_noTransaction_noTransaction_exception_try();
 

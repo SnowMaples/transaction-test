@@ -351,6 +351,7 @@ public class TransactionPropagationExampleImpl implements TransactionPropagation
 	@Override
 	public void transaction_addRequired_getRequiresNew_get(){
 		User1 user1=new User1();
+		user1.setId(1);
 		user1.setName("张三");
 		user1Service.addRequired(user1);
 
@@ -419,6 +420,7 @@ public class TransactionPropagationExampleImpl implements TransactionPropagation
 	@Override
 	public void transaction_addRequired_getNotSuppored_get(){
 		User1 user1=new User1();
+		user1.setId(1);
 		user1.setName("张三");
 		user1Service.addRequired(user1);
 
@@ -596,6 +598,17 @@ public class TransactionPropagationExampleImpl implements TransactionPropagation
 		}catch (Exception e){
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void noTransaction_no_transaction_inner_required() {
+		User1 user1=new User1();
+		user1.setName("张三");
+		user1Service.addRequired(user1);
+
+		User2 user2=new User2();
+		user2.setName("李四");
+		user2Service.add(user2);
 	}
 
 	@Transactional

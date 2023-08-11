@@ -137,11 +137,20 @@ public class TransactionPropagationExampleImplTest {
 
 	/**
 	 * 结果：张三（插入），李四（插入）</br>
-	 * 外围方法开启事务，插入“张三”、“李四”方法都在外围方法的事务中运行，加入外围方法事务，所以三个方法同一个事务。外围方法或内部方法抛出异常被捕获，无事务回滚，因此正常提交，
+	 * 外围方法开启事务，插入“张三”、“李四”方法都在外围方法的事务中运行，加入外围方法事务，所以三个方法同一个事务。外围方法或内部方法抛出异常被捕获，不会被外部方法感知，无事务回滚，因此正常提交，
 	 */
 	@Test
 	public void testTransaction_required_required_exception_try2() {
 		transactionPropagationExample.transaction_required_required_exception_try2();
+	}
+
+	/**
+	 * 结果：张三（插入） 李四1（插入） 李四2（2）插入
+	 * 同一类中方法调用，@Transactional不生效
+	 */
+	@Test
+	public void noTransaction_no_transaction_inner_required(){
+		transactionPropagationExample.noTransaction_no_transaction_inner_required();
 	}
 
 	/**
